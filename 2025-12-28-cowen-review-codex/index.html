@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tyler Cowen 2025 Retrospective - Key Endorsements</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #171614;
+        --muted: #4f4b45;
+        --accent: #0f6d5c;
+        --accent-2: #c26a3d;
+        --paper: #f6f1e8;
+        --paper-2: #efe7da;
+        --card: #fcfaf6;
+        --line: #d9cfc0;
+        --shadow: 0 18px 45px rgba(23, 22, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Space Grotesk", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: radial-gradient(circle at top left, #f9f4ea 0%, #f3ebdd 35%, #efe4d3 70%, #eadfce 100%);
+        min-height: 100vh;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image:
+          linear-gradient(120deg, rgba(15, 109, 92, 0.08), transparent 35%),
+          repeating-radial-gradient(circle at 10% 20%, rgba(0, 0, 0, 0.03) 0 1px, transparent 1px 6px);
+        pointer-events: none;
+        mix-blend-mode: multiply;
+      }
+
+      .page {
+        position: relative;
+        z-index: 1;
+        padding: 48px 20px 80px;
+      }
+
+      .container {
+        max-width: 1120px;
+        margin: 0 auto;
+      }
+
+      header {
+        display: grid;
+        gap: 16px;
+        padding: 24px 28px 32px;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: linear-gradient(145deg, rgba(252, 250, 246, 0.95), rgba(244, 235, 220, 0.9));
+        box-shadow: var(--shadow);
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-size: 12px;
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      h1 {
+        font-family: "Fraunces", "Georgia", serif;
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        margin: 0;
+      }
+
+      .lead {
+        font-size: 1.05rem;
+        color: var(--muted);
+        max-width: 760px;
+        line-height: 1.6;
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      .pill {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 6px 14px;
+        background: var(--paper);
+      }
+
+      section {
+        margin-top: 56px;
+      }
+
+      section h2 {
+        font-family: "Fraunces", "Georgia", serif;
+        font-size: clamp(1.6rem, 3vw, 2.4rem);
+        margin-bottom: 6px;
+      }
+
+      .section-intro {
+        color: var(--muted);
+        max-width: 760px;
+        line-height: 1.6;
+      }
+
+      .legend {
+        margin-top: 18px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .legend span {
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      .legend .favorite {
+        background: rgba(15, 109, 92, 0.12);
+        color: var(--accent);
+        border: 1px solid rgba(15, 109, 92, 0.4);
+      }
+
+      .legend .excellent {
+        background: rgba(194, 106, 61, 0.15);
+        color: var(--accent-2);
+        border: 1px solid rgba(194, 106, 61, 0.35);
+      }
+
+      .legend .very-good {
+        background: rgba(23, 22, 20, 0.08);
+        color: #3b3833;
+        border: 1px solid rgba(23, 22, 20, 0.2);
+      }
+
+      .grid {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+      }
+
+      .card {
+        padding: 18px 18px 20px;
+        border-radius: 18px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        box-shadow: 0 10px 24px rgba(23, 22, 20, 0.08);
+        display: grid;
+        gap: 10px;
+        min-height: 210px;
+      }
+
+      .card .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      .card h3 {
+        font-size: 1.1rem;
+        margin: 0;
+      }
+
+      .card .why {
+        color: var(--muted);
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      .quote {
+        border-left: 3px solid var(--accent-2);
+        padding-left: 12px;
+        font-size: 0.92rem;
+        color: #3d3832;
+      }
+
+      .quote em {
+        color: var(--ink);
+      }
+
+      .note {
+        margin-top: 42px;
+        padding: 16px 20px;
+        border-radius: 16px;
+        border: 1px dashed rgba(23, 22, 20, 0.25);
+        color: var(--muted);
+        background: rgba(255, 255, 255, 0.4);
+        line-height: 1.6;
+      }
+
+      footer {
+        margin-top: 60px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="container">
+        <header class="reveal">
+          <div class="eyebrow">2025 Year In Review</div>
+          <h1>Tyler Cowen's Most Enthusiastic Endorsements</h1>
+          <p class="lead">
+            A scannable field guide to the 2025 Conversations with Tyler retrospective: the episodes Tyler singled out as favorites,
+            the books he praised with clear reasons, and a short set of other standout cultural picks.
+          </p>
+          <div class="meta">
+            <span class="pill">Source: Conversations with Tyler 2025 Retrospective</span>
+            <span class="pill">Focus: explicit praise + reasons stated on-air</span>
+            <span class="pill">Layout: episodes - books - other endorsements</span>
+          </div>
+        </header>
+
+        <section>
+          <h2 class="reveal">Podcast Episodes Tyler Praised Most</h2>
+          <p class="section-intro reveal">
+            These are the conversations Tyler explicitly called favorites, excellent, or peak-form. Quotes are trimmed for clarity.
+          </p>
+          <div class="legend reveal">
+            <span class="favorite">Favorite</span>
+            <span class="excellent">Excellent</span>
+            <span class="very-good">Very Good</span>
+          </div>
+          <div class="grid">
+            <article class="card reveal">
+              <div class="tag favorite">Favorite Episode</div>
+              <h3>Jonny Steinberg - South Africa</h3>
+              <div class="why">Deep, thoughtful answers and a rare focus on South Africa.</div>
+              <div class="quote">"<em>One of my favorite episodes...</em> answers were deep and thoughtful... good to focus on South Africa."</div>
+            </article>
+            <article class="card reveal">
+              <div class="tag favorite">Top 3-4</div>
+              <h3>Any Austin - YouTube &amp; Video Games</h3>
+              <div class="why">Smart, candid, and surprisingly magical moments.</div>
+              <div class="quote">"<em>One of my three or four favorite episodes...</em> excellent and magical at times."</div>
+            </article>
+            <article class="card reveal">
+              <div class="tag favorite">Favorite Episode</div>
+              <h3>Donald Lopez - Buddhism</h3>
+              <div class="why">Direct, no-BS answers delivered immediately.</div>
+              <div class="quote">"<em>One of my favorites of the year...</em> excellent answers to all questions... <em>No BS.</em>"</div>
+            </article>
+            <article class="card reveal">
+              <div class="tag excellent">Excellent</div>
+              <h3>Gaurav Kapadia - Investing</h3>
+              <div class="why">Underrated guest with crisp, high-signal answers.</div>
+              <div class="quote">"Another very good one... <em>excellent.</em>"</div>
+            </article>
+            <article class="card reveal">
+              <div class="tag excellent">Peak Form</div>
+              <h3>Cass Sunstein - Liberalism</h3>
+              <div class="why">Challenged, fully engaged, and at his best.</div>
+              <div class="quote">"<em>Cass at his very peak...</em> a great episode."</div>
+            </article>
+            <article class="card reveal">
+              <div class="tag very-good">Very Good</div>
+              <h3>David Robertson - Classical Music</h3>
+              <div class="why">A less-popular guest that Tyler "quite liked."</div>
+              <div class="quote">"He was <em>very good</em>, and I quite liked the episode."</div>
+            </article>
+            <article class="card reveal">
+              <div class="tag very-good">Very Good</div>
+              <h3>Ian Leslie - John &amp; Paul (The Beatles)</h3>
+              <div class="why">A strong popular-culture episode that held up.</div>
+              <div class="quote">"That was <em>very good</em>."</div>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="reveal">Books (and a Few Essential Reads) He Endorsed</h2>
+          <p class="section-intro reveal">
+            Endorsements only: clear praise plus a stated reason. This list covers the books he singled out as best, seminal,
+            or enduring.
+          </p>
+          <div class="grid">
+            <article class="card reveal">
+              <div class="tag favorite">Best Book</div>
+              <h3>Robert Tombs - The English and Their History</h3>
+              <div class="why">Clear winner; compelling enough that readers asked for more like it.</div>
+              <div class="quote">"<em>Clear winner...</em> everyone should read it... <em>Utterly compelling.</em>"</div>
+            </article>
+            <article class="card reveal">
+              <div class="tag excellent">Best Of Year</div>
+              <h3>Ashlee Vance - Elon Musk</h3>
+              <div class="why">Flagged as one of the best books of the year and more important with time.</div>
+              <div class="quote">"<em>All the more important</em>, right?"</div>
+            </article>
+            <article class="card reveal">
+              <div class="tag excellent">Top Biography</div>
+              <h3>Charles Moore - Margaret Thatcher: At Her Zenith</h3>
+              <div class="why">One of the best biographies of the last decade.</div>
+              <div class="quote">"<em>One of the best biographies</em> of the last 10 years... unbelievable."</div>
+            </article>
+            <article class="card reveal">
+              <div class="tag excellent">Seminal</div>
+              <h3>Garett Jones - The Hive Mind</h3>
+              <div class="why">Enduring impact; widely cited and still influential.</div>
+              <div class="quote">"Held up very well... <em>seminal work.</em>"</div>
+            </article>
+            <article class="card reveal">
+              <div class="tag excellent">Deep Research</div>
+              <h3>Scott Sumner - The Midas Paradox</h3>
+              <div class="why">A thorough, long-gestation argument about deflation in the Great Depression.</div>
+              <div class="quote">"A <em>very thorough</em> book... worked on for something like 20 years."</div>
+            </article>
+            <article class="card reveal">
+              <div class="tag very-good">Strong Pick</div>
+              <h3>Richard Thaler - Misbehaving</h3>
+              <div class="why">A needed, solid book about economists and economic ideas.</div>
+              <div class="quote">"There should be more books about economics... <em>that was a good one.</em>"</div>
+            </article>
+            <article class="card reveal">
+              <div class="tag favorite">Modern Classic</div>
+              <h3>Michel Houellebecq - Submission</h3>
+              <div class="why">Called the most classic fiction of the last 20 years; reread-worthy and philosophical.</div>
+              <div class="quote">"<em>Rewards rereads... incredible.</em>"</div>
+            </article>
+            <article class="card reveal">
+              <div class="tag excellent">Classic Status</div>
+              <h3>Kamel Daoud - The Meursault Investigation</h3>
+              <div class="why">A retelling of Camus that has already become a classic.</div>
+              <div class="quote">"The retelling of Camus has become a <em>classic book.</em>"</div>
+            </article>
+            <article class="card reveal">
+              <div class="tag excellent">Standout Fiction</div>
+              <h3>The Widower - Singapore novel</h3>
+              <div class="why">Stuck with him as a genuinely great book.</div>
+              <div class="quote">"<em>The Widower is a great book.</em>"</div>
+            </article>
+          </div>
+          <div class="note reveal">
+            No individual articles were singled out with explicit endorsements in the retrospective; the book list captures the
+            strongest "read this" signals Tyler provided.
+          </div>
+        </section>
+
+        <section>
+          <h2 class="reveal">Other Endorsements Worth Noting</h2>
+          <p class="section-intro reveal">
+            These are non-book cultural picks Tyler praised with clear reasons: music releases and recordings that stood out in his
+            2015 lookback.
+          </p>
+          <div class="grid">
+            <article class="card reveal">
+              <div class="tag excellent">Jazz Highlight</div>
+              <h3>Kamasi Washington - The Epic</h3>
+              <div class="why">His favorite jazz album of the year, still strong on repeat.</div>
+              <div class="quote">"The jazz album I've <em>enjoyed the most</em>... held up very well."</div>
+            </article>
+            <article class="card reveal">
+              <div class="tag very-good">Box Set Pick</div>
+              <h3>Hula Land: Golden Age of Hawaiian Music</h3>
+              <div class="why">Fun, accessible, and sonically distinct.</div>
+              <div class="quote">"It's <em>super accessible</em>, and it also feels and sounds different."</div>
+            </article>
+            <article class="card reveal">
+              <div class="tag excellent">Global Sounds</div>
+              <h3>Dabke: Sounds of the Syrian Houran &amp; Omar Souleyman</h3>
+              <div class="why">Two high-confidence recommendations from his list.</div>
+              <div class="quote">"<em>Highly worthwhile.</em>"</div>
+            </article>
+            <article class="card reveal">
+              <div class="tag favorite">Classical Peak</div>
+              <h3>Matthew Bengtson - Scriabin Piano Sonatas</h3>
+              <div class="why">Best versions of the sonatas; one of his best live musical experiences.</div>
+              <div class="quote">"The <em>best versions</em>... one of my better musical experiences."</div>
+            </article>
+          </div>
+        </section>
+
+        <footer class="reveal">
+          Built from the official transcript: <a href="https://conversationswithtyler.com/episodes/conversations-with-tyler-2025-retrospective/">Conversations with Tyler 2025 Retrospective</a>.
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+    </script>
+  </body>
+</html>

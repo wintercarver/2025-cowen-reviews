@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyler Cowen's 2025 Retrospective | Best of Conversations with Tyler</title>
+    <meta name="description" content="Curated highlights from Tyler Cowen's 2025 year-in-review podcast - top episodes, book recommendations, and cultural picks.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0b;
+            --bg-secondary: #141416;
+            --bg-card: #1a1a1f;
+            --text-primary: #f5f5f7;
+            --text-secondary: #a1a1a6;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-green: #10b981;
+            --accent-amber: #f59e0b;
+            --accent-rose: #f43f5e;
+            --border: #2a2a2f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Hero Section */
+        header {
+            padding: 80px 0 60px;
+            text-align: center;
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(139, 92, 246, 0.15);
+            color: var(--accent-purple);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+
+        .meta {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 11, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 16px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--text-primary);
+            background: var(--bg-card);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .section-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .section-icon.podcasts { background: rgba(59, 130, 246, 0.15); }
+        .section-icon.books { background: rgba(16, 185, 129, 0.15); }
+        .section-icon.films { background: rgba(244, 63, 94, 0.15); }
+        .section-icon.music { background: rgba(245, 158, 11, 0.15); }
+
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            border-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .badge-popular {
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--accent-blue);
+        }
+
+        .badge-underrated {
+            background: rgba(139, 92, 246, 0.15);
+            color: var(--accent-purple);
+        }
+
+        .badge-fiction {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent-green);
+        }
+
+        .badge-nonfiction {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--accent-amber);
+        }
+
+        .card-rank {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--border);
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .card-author {
+            font-size: 14px;
+            color: var(--accent-purple);
+            margin-bottom: 16px;
+        }
+
+        .card-quote {
+            font-size: 15px;
+            color: var(--text-secondary);
+            font-style: italic;
+            padding-left: 16px;
+            border-left: 3px solid var(--border);
+            line-height: 1.7;
+        }
+
+        /* Featured Card */
+        .featured-card {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+
+        .featured-card .card-title {
+            font-size: 1.5rem;
+        }
+
+        /* Subsection */
+        .subsection {
+            margin-top: 60px;
+        }
+
+        .subsection-title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .subsection-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--accent-purple);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 60px 0 40px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .meta {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            nav ul {
+                gap: 4px;
+            }
+
+            nav a {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <span class="tag">2025 Retrospective</span>
+            <h1>Tyler Cowen's Year in Review</h1>
+            <p class="subtitle">The best episodes, books, films, and music from Conversations with Tyler — looking back at 2015 from a decade later.</p>
+            <div class="meta">
+                <span class="meta-item">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg>
+                    December 2025
+                </span>
+                <span class="meta-item">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/><path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/></svg>
+                    Podcast Episode
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#episodes">🎙️ Episodes</a></li>
+            <li><a href="#books">📚 Books</a></li>
+            <li><a href="#films">🎬 Films</a></li>
+            <li><a href="#music">🎵 Music</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- EPISODES SECTION -->
+        <section id="episodes">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-icon podcasts">🎙️</div>
+                    <div>
+                        <h2>Top Episodes</h2>
+                        <p class="section-subtitle">The most impactful conversations of the year</p>
+                    </div>
+                </div>
+
+                <div class="subsection-title">Most Popular</div>
+                <div class="cards-grid">
+                    <div class="card">
+                        <span class="card-badge badge-popular">Most Popular</span>
+                        <div class="card-rank">1</div>
+                        <h3 class="card-title">Sam Altman</h3>
+                        <p class="card-quote">"Clear winner" — dominated download numbers for the year</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-rank">2</div>
+                        <h3 class="card-title">Ezra Klein</h3>
+                        <p class="card-quote">Among the highest-traffic episodes of 2025</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-rank">3</div>
+                        <h3 class="card-title">Steven Pinker</h3>
+                        <p class="card-quote">Top five most downloaded</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-rank">4</div>
+                        <h3 class="card-title">David Brooks</h3>
+                        <p class="card-quote">Top five most downloaded</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-rank">5</div>
+                        <h3 class="card-title">Nate Silver</h3>
+                        <p class="card-quote">Top five most downloaded</p>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Tyler's Personal Favorites (Underrated Gems)</div>
+                    <div class="cards-grid">
+                        <div class="card featured-card">
+                            <span class="card-badge badge-underrated">Tyler's Pick</span>
+                            <h3 class="card-title">Any Austin</h3>
+                            <p class="card-author">YouTuber & Creator</p>
+                            <p class="card-quote">"One of my three or four favorite episodes for the year... excellent and magical at times."</p>
+                        </div>
+                        <div class="card">
+                            <span class="card-badge badge-underrated">Deep Insights</span>
+                            <h3 class="card-title">Jonny Steinberg</h3>
+                            <p class="card-author">South Africa Expert</p>
+                            <p class="card-quote">"One of my favorite episodes. All of his answers were deep and thoughtful."</p>
+                        </div>
+                        <div class="card">
+                            <span class="card-badge badge-underrated">Tyler's Pick</span>
+                            <h3 class="card-title">Donald Lopez</h3>
+                            <p class="card-author">Buddhism Scholar</p>
+                            <p class="card-quote">"One of my favorites of the year, he just had excellent answers."</p>
+                        </div>
+                        <div class="card">
+                            <span class="card-badge badge-underrated">Peak Performance</span>
+                            <h3 class="card-title">Cass Sunstein</h3>
+                            <p class="card-author">On Liberalism</p>
+                            <p class="card-quote">"Cass at his very peak... a great episode."</p>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Ian Leslie</h3>
+                            <p class="card-author">The Beatles</p>
+                            <p class="card-quote">"Very good" — above average traffic for an arts/culture topic</p>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">David Robertson</h3>
+                            <p class="card-author">Conductor</p>
+                            <p class="card-quote">"He was very good" — praised despite lower popularity</p>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Dan Wang</h3>
+                            <p class="card-author">China & Technology</p>
+                            <p class="card-quote">Extended to 1 hour 40 minutes due to sustained listener interest</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOOKS SECTION -->
+        <section id="books">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-icon books">📚</div>
+                    <div>
+                        <h2>Book Recommendations</h2>
+                        <p class="section-subtitle">2015 was an exceptional year for literature — here's what has held up</p>
+                    </div>
+                </div>
+
+                <div class="subsection-title">Fiction</div>
+                <div class="cards-grid">
+                    <div class="card featured-card">
+                        <span class="card-badge badge-fiction">Masterpiece</span>
+                        <h3 class="card-title">Submission</h3>
+                        <p class="card-author">Michel Houellebecq</p>
+                        <p class="card-quote">"The most classic work of fiction of the last 20 years... a work of philosophy."</p>
+                    </div>
+                    <div class="card">
+                        <span class="card-badge badge-fiction">Classic</span>
+                        <h3 class="card-title">The Meursault Investigation</h3>
+                        <p class="card-author">Kamel Daoud</p>
+                        <p class="card-quote">A powerful retelling of Camus — already a modern classic</p>
+                    </div>
+                    <div class="card">
+                        <span class="card-badge badge-fiction">Mega-Classic</span>
+                        <h3 class="card-title">Neapolitan Novels (Final Volume)</h3>
+                        <p class="card-author">Elena Ferrante</p>
+                        <p class="card-quote">Described as "mega-classic" — the culmination of a landmark series</p>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Non-Fiction</div>
+                    <div class="cards-grid">
+                        <div class="card featured-card">
+                            <span class="card-badge badge-nonfiction">Best of Year</span>
+                            <h3 class="card-title">The English and Their History</h3>
+                            <p class="card-author">Robert Tombs</p>
+                            <p class="card-quote">"Best was the Robert Tombs book... utterly compelling."</p>
+                        </div>
+                        <div class="card">
+                            <span class="card-badge badge-nonfiction">Essential</span>
+                            <h3 class="card-title">Elon Musk</h3>
+                            <p class="card-author">Ashlee Vance</p>
+                            <p class="card-quote">"All the more important" — prescient biography that has only grown in relevance</p>
+                        </div>
+                        <div class="card">
+                            <span class="card-badge badge-nonfiction">Top Biography</span>
+                            <h3 class="card-title">Margaret Thatcher (Vol. 2)</h3>
+                            <p class="card-author">Charles Moore</p>
+                            <p class="card-quote">"One of the best biographies of the last 10 years."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FILMS SECTION -->
+        <section id="films">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-icon films">🎬</div>
+                    <div>
+                        <h2>Film Picks</h2>
+                        <p class="section-subtitle">Documentaries and features that have aged remarkably well</p>
+                    </div>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card featured-card">
+                        <span class="card-badge badge-popular">Best of Year</span>
+                        <h3 class="card-title">Red Army</h3>
+                        <p class="card-author">Documentary — Soviet Hockey</p>
+                        <p class="card-quote">"Best movie that year that I know of."</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Ex Machina</h3>
+                        <p class="card-author">Alex Garland</p>
+                        <p class="card-quote">"Has become seminal... a good movie. It's not a great movie" — important for its cultural impact on AI discourse</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Meru</h3>
+                        <p class="card-author">Documentary — Mountain Climbing</p>
+                        <p class="card-quote">Deserves "a Cass Sunstein award" for its behavioral economics insights — a study in persistence and risk</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MUSIC SECTION -->
+        <section id="music">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-icon music">🎵</div>
+                    <div>
+                        <h2>Music Highlights</h2>
+                        <p class="section-subtitle">2015 marked a peak era for popular and classical music</p>
+                    </div>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card featured-card">
+                        <span class="card-badge badge-popular">Peak Era</span>
+                        <h3 class="card-title">Hip-Hop's Golden Moment</h3>
+                        <p class="card-author">Kanye West, Frank Ocean, Kendrick Lamar, D'Angelo</p>
+                        <p class="card-quote">"Peak time... fantastic." A convergence of artistic excellence rarely seen in popular music.</p>
+                    </div>
+                    <div class="card">
+                        <span class="card-badge badge-underrated">Jazz Revival</span>
+                        <h3 class="card-title">The Epic</h3>
+                        <p class="card-author">Kamasi Washington</p>
+                        <p class="card-quote">"Jazz album I've enjoyed the most... held up very well." A landmark recording that revitalized interest in jazz.</p>
+                    </div>
+                    <div class="card">
+                        <span class="card-badge badge-nonfiction">Classical</span>
+                        <h3 class="card-title">Scriabin Piano Sonatas</h3>
+                        <p class="card-author">Matthew Bengtson</p>
+                        <p class="card-quote">"Best versions of the Scriabin piano sonatas." The definitive modern interpretation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Based on the <a href="https://conversationswithtyler.com/episodes/conversations-with-tyler-2025-retrospective/" target="_blank" rel="noopener">Conversations with Tyler 2025 Retrospective</a></p>
+            <p style="margin-top: 8px; opacity: 0.7;">Curated summary • Not affiliated with Mercatus Center or Tyler Cowen</p>
+        </div>
+    </footer>
+</body>
+</html>
